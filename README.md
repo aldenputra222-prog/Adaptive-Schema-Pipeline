@@ -65,7 +65,6 @@ Ikuti langkah ini untuk menjalankan pipeline di komputer lokal:
 
 1. Prerequisites
 Install library yang dibutuhkan:
-```
 
 ```Bash
 
