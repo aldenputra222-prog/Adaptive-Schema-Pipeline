@@ -42,23 +42,23 @@ ADAPTIVE-SCHEMA-PIPELINE/
 ```
 
 ## ⚡ How It Works (Workflow)
-Ingestion Layer (dlt):
+# Ingestion Layer (dlt):
 
-Script pipeline_kantin.py membaca senin.csv dan selasa.csv.
+1.  Script pipeline_kantin.py membaca senin.csv dan selasa.csv.
 
-dlt mendeteksi kolom baru (diskon) pada file Selasa.
+2.  dlt mendeteksi kolom baru (diskon) pada file Selasa.
 
-Tabel di DuckDB diperbarui otomatis (Schema Evolution). Data Senin yang tidak memiliki diskon diisi dengan NULL.
+3.  Tabel di DuckDB diperbarui otomatis (Schema Evolution). Data Senin yang tidak memiliki diskon diisi dengan NULL.
 
-Transformation Layer (SQLMesh):
+# Transformation Layer (SQLMesh):
 
-SQLMesh membaca raw data dari DuckDB.
+1.  SQLMesh membaca raw data dari DuckDB.
 
-Menjalankan logika transformasi di laporan_bersih.sql.
+2.  Menjalankan logika transformasi di laporan_bersih.sql.
 
-Menggunakan fungsi COALESCE(diskon, 0) untuk mengubah NULL menjadi 0.
+3.  Menggunakan fungsi COALESCE(diskon, 0) untuk mengubah NULL menjadi 0.
 
-Menghitung harga_akhir (Revenue bersih) secara otomatis.
+4.  Menghitung harga_akhir (Revenue bersih) secara otomatis.
 
 ## 🛠️ Getting Started
 Ikuti langkah ini untuk menjalankan pipeline di komputer lokal:
