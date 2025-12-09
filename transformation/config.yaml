@@ -1,0 +1,10 @@
+gateways:
+  test_gateway:
+    connection:
+      type: duckdb
+      database: ./kantin_file_pipeline.duckdb
+
+default_gateway: test_gateway
+
+model_defaults:
+  dialect: duckdb
