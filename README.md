@@ -42,7 +42,7 @@ ADAPTIVE-SCHEMA-PIPELINE/
 ```
 
 ## ⚡ How It Works (Workflow)
-# Ingestion Layer (dlt):
+Ingestion Layer (dlt):
 
 1.  Script pipeline_kantin.py membaca senin.csv dan selasa.csv.
 
@@ -50,7 +50,7 @@ ADAPTIVE-SCHEMA-PIPELINE/
 
 3.  Tabel di DuckDB diperbarui otomatis (Schema Evolution). Data Senin yang tidak memiliki diskon diisi dengan NULL.
 
-# Transformation Layer (SQLMesh):
+Transformation Layer (SQLMesh):
 
 1.  SQLMesh membaca raw data dari DuckDB.
 
